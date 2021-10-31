@@ -1,0 +1,13 @@
+nav {
+  background-color: #343A40;
+  color: white;
+}
+
+nav .nav-item a, nav .navbar-brand {
+  color: white;
+}
+
+nav .nav-item {
+  cursor: pointer;
+}
+/*# sourceMappingURL=navbar.component.css.map */

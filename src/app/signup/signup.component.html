@@ -1,0 +1,54 @@
+<div class="d-flex justify-content-center align-items-center full" id="signUp">
+  <div class="container">
+    <form [formGroup]="registerForm" (ngSubmit)="submitFormGroup()">
+      <div class="row ">
+
+        <div class="col-md-6 ">
+          <input type="text" placeholder="Enter First Name" class="form-control mt-4 " formControlName="first_name">
+          <div class="errors"
+            *ngIf="registerForm.controls.first_name.invalid&&registerForm.controls.first_name.touched">
+            <p class="text-danger my-2" *ngIf="registerForm.controls.first_name.errors?.required">first name is
+              required
+            </p>
+            <p class="text-danger my-2" *ngIf="registerForm.controls.first_name.errors?.minlength">first name min
+              Length
+              is 3 letters</p>
+            <p class="text-danger my-2" *ngIf="registerForm.controls.first_name.errors?.maxlength">first name max
+              Length
+              is 10 letters</p>
+          </div>
+        </div>
+
+        <div class="col-md-6 ">
+          <input type="text" placeholder="Enter Last Name" class="form-control mt-4 " formControlName="last_name">
+          <div class="errors" *ngIf="registerForm.controls.last_name.invalid&&registerForm.controls.last_name.touched">
+            <p class="text-danger my-2" *ngIf="registerForm.controls.last_name.errors?.required">last name is required
+            </p>
+            <p class="text-danger my-2" *ngIf="registerForm.controls.last_name.errors?.minlength">last name min Length
+              is 3 letters</p>
+            <p class="text-danger my-2" *ngIf="registerForm.controls.last_name.errors?.maxlength">last name max Length
+              is 10 letters</p>
+          </div>
+        </div>
+      </div>
+      <input type="text" placeholder="Enter Email" class="form-control mt-4 " formControlName="email">
+      <div class="errors" *ngIf="registerForm.controls.email.invalid&&registerForm.controls.email.touched">
+        <p class="text-danger my-2" *ngIf="registerForm.controls.email.errors?.email">enter valid email</p>
+        <p class="text-danger my-2" *ngIf="registerForm.controls.email.errors?.required">email is required</p>
+      </div>
+      <input type="text" placeholder="Enter Your Age" class="form-control mt-4 " formControlName="age">
+      <div class="errors"
+        *ngIf="registerForm.controls.age.errors?.required && registerForm.controls.age.errors?.touched">
+        <p class="text-danger " *ngIf="registerForm.controls.age.errors?.min">minimum age is 12 years</p>
+        <p class="text-danger" *ngIf="registerForm.controls.age.errors?.max">miximum age is 60 years</p>
+      </div>
+      <input type="text" placeholder="Enter Password" class="form-control mt-4 " formControlName="password">
+      <div class="errors"
+        *ngIf="registerForm.controls.password.errors?.touched">
+        <p class="text-danger" *ngIf="registerForm.controls.password.errors?.required"> password is required/p>
+        <p class="text-danger my-2" *ngIf="registerForm.controls.password.errors?.required">enter valid password</p>
+      </div>
+      <button [disabled]="registerForm.invalid" type="submit" class="btn form-control mt-4">signup</button>
+    </form>
+  </div>
+</div>

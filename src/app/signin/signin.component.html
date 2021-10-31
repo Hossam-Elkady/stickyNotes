@@ -1,0 +1,29 @@
+<div class="d-flex justify-content-center align-items-center full"  id="signIn">
+  <div class="container">
+    <form class="m-auto" [formGroup]="loginForm" (ngSubmit)="submitFormGroup()">
+      <input type="text" placeholder="Enter Email" class="form-control" formControlName="email" />
+      <div class="errors" *ngIf="
+          loginForm.controls.email.invalid && loginForm.controls.email.touched
+        ">
+        <p class="text-danger mb-2" *ngIf="loginForm.controls.email.errors?.email">
+          enter valid email
+        </p>
+        <p class="text-danger mb-2" *ngIf="loginForm.controls.email.errors?.required">
+          email is required
+        </p>
+      </div>
+      <input type="password" placeholder="Enter Password" class="form-control mt-4" formControlName="password" />
+      <div class="errors" *ngIf="
+          loginForm.controls.password.invalid &&
+          loginForm.controls.password.touched
+        ">
+        <p class="text-danger my-2" *ngIf="loginForm.controls.password.errors?.required">
+          enter valid password
+        </p>
+      </div>
+      <button [disabled]="loginForm.invalid" type="submit" class="btn form-control mt-4">
+        login
+      </button>
+    </form>
+  </div>
+</div>

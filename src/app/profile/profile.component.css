@@ -1,0 +1,89 @@
+@import url("https://fonts.googleapis.com/css2?family=Shadows+Into+Light&family=Zilla+Slab&display=swap");
+.gray {
+  background-image: linear-gradient(135deg, #bdc3c7, #2c3e50);
+  min-height: 87vh;
+}
+
+.col {
+  background-color: #88bdbc;
+  color: black;
+  overflow: hidden;
+  min-height: 200px !important;
+  -webkit-box-shadow: 3px 6px 2px #2c3e50;
+          box-shadow: 3px 6px 2px #2c3e50;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.fa-ellipsis-v {
+  position: absolute;
+  right: 15px;
+  top: 15px;
+  cursor: pointer;
+  color: black !important;
+}
+
+.notemenu {
+  position: absolute;
+  right: -100px;
+  top: 40px;
+  z-index: 2;
+  width: 120px;
+}
+
+.notemenu p {
+  color: black;
+}
+
+.d-flex {
+  -webkit-box-align: center !important;
+      -ms-flex-align: center !important;
+          align-items: center !important;
+}
+
+.bg-info {
+  color: white;
+  font-weight: 800;
+}
+
+.text {
+  transform: rotate(-10deg);
+  -webkit-transform: rotate(-10deg);
+  -moz-transform: rotate(-10deg);
+  -ms-transform: rotate(-10deg);
+  -o-transform: rotate(-10deg);
+}
+
+h3 {
+  transform: rotate(-5deg);
+  -webkit-transform: rotate(-5deg);
+  -moz-transform: rotate(-5deg);
+  -ms-transform: rotate(-5deg);
+  -o-transform: rotate(-5deg);
+}
+
+.col p,
+h3 {
+  font-family: "Shadows Into Light", cursive;
+}
+
+#delete p {
+  color: #17a2b8 !important;
+  text-align: center;
+}
+
+#delete h5 {
+  color: black !important;
+}
+/*# sourceMappingURL=profile.component.css.map */
